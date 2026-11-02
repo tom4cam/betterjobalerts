@@ -3,193 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy</title>
-<meta name="description" content="Privacy policy for Better Job Alerts, a free email service that sends job openings matching what you asked for.">
+<title>Better Job Alerts</title>
+<meta name="description" content="Free job alerts by email. Tell BJ the role you want and where, and it emails you new openings that fit, Monday, Wednesday and Friday.">
+<meta property="og:title" content="Better Job Alerts">
+<meta property="og:description" content="Free job alerts by email. One email to start, no forms, no accounts.">
+<meta property="og:image" content="example-alert.jpg">
 <style>
   :root{
     --bg:#f3f4f6; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
-    --line:#e5e7eb; --blue:#2563eb; --header:#1e293b;
+    --line:#e5e7eb; --blue:#2563eb; --blue-ink:#ffffff; --header:#1e293b; --soft:#eef2ff;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#0f172a; --card:#1e293b; --ink:#e2e8f0; --muted:#94a3b8;
-      --line:#334155; --blue:#60a5fa; --header:#0b1220;
+      --line:#334155; --blue:#60a5fa; --blue-ink:#0b1220; --header:#0b1220; --soft:#1e2a44;
     }
   }
   :root[data-theme="dark"]{
     --bg:#0f172a; --card:#1e293b; --ink:#e2e8f0; --muted:#94a3b8;
-    --line:#334155; --blue:#60a5fa; --header:#0b1220;
+    --line:#334155; --blue:#60a5fa; --blue-ink:#0b1220; --header:#0b1220; --soft:#1e2a44;
   }
   *{box-sizing:border-box}
   body{
     margin:0; background:var(--bg); color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    font-size:16px; line-height:1.6; -webkit-text-size-adjust:100%;
+    font-size:17px; line-height:1.6; -webkit-text-size-adjust:100%;
   }
-  .wrap{max-width:720px; margin:0 auto; padding:24px 16px 64px}
-  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden}
-  header{background:var(--header); padding:22px 28px}
-  header h1{margin:0; color:#fff; font-size:20px; font-weight:700}
-  header p{margin:4px 0 0; color:#cbd5e1; font-size:13px}
-  main{padding:26px 28px 32px}
-  h2{font-size:17px; margin:30px 0 8px; padding-top:18px; border-top:1px solid var(--line)}
-  h2:first-of-type{border-top:0; padding-top:0; margin-top:0}
-  h3{font-size:15px; margin:20px 0 6px}
-  p,li{color:var(--ink)}
   a{color:var(--blue)}
-  ul,ol{padding-left:22px}
-  li{margin:5px 0}
-  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:15px}
-  th,td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
-  th{font-weight:700}
-  .lede{background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:0 0 6px}
-  .note{color:var(--muted); font-size:13px}
-  footer{color:var(--muted); font-size:13px; text-align:center; padding:18px 8px 0}
-  @media (max-width:520px){
-    main{padding:20px 18px 26px} header{padding:18px 18px}
-    table,thead,tbody,th,td,tr{display:block}
-    thead{display:none}
-    td{border:0; padding:3px 0}
-    td:first-child{font-weight:700; padding-top:10px}
-    tr{border-bottom:1px solid var(--line); padding-bottom:8px}
+  .wrap{max-width:880px; margin:0 auto; padding:0 16px 64px}
+  .hero{background:var(--header); color:#fff}
+  .hero .wrap{padding:56px 16px 48px}
+  .brand{font-weight:700; font-size:15px; letter-spacing:.3px; color:#93c5fd; margin:0 0 14px}
+  h1{font-size:40px; line-height:1.15; margin:0 0 14px; max-width:680px}
+  .sub{font-size:19px; color:#cbd5e1; margin:0 0 26px; max-width:640px}
+  .cta{display:inline-block; background:#3b82f6; color:#fff; font-weight:700; text-decoration:none;
+       padding:14px 26px; border-radius:10px; font-size:18px}
+  .cta:hover,.cta:focus-visible{background:#2563eb}
+  .cta-note{display:block; color:#94a3b8; font-size:14px; margin-top:12px}
+  .cta-note a{color:#cbd5e1}
+  section{margin-top:44px}
+  h2{font-size:24px; margin:0 0 14px}
+  .video{position:relative; aspect-ratio:16/9; border-radius:12px; overflow:hidden;
+         border:1px solid var(--line); background:#000; margin-top:-24px}
+  .video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+  .steps{list-style:none; padding:0; margin:0; display:grid; gap:12px;
+         grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .steps li{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px}
+  .steps b{display:block; font-size:17px; margin-bottom:4px}
+  .steps span{color:var(--muted); font-size:15px}
+  .num{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:50%;
+       background:var(--soft); color:var(--blue); font-weight:700; font-size:14px; margin-bottom:8px}
+  .example{background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+  .example img{display:block; width:100%; height:auto}
+  .example p{margin:0; padding:12px 16px; color:var(--muted); font-size:14px}
+  .faq{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:6px 20px}
+  .faq details{border-bottom:1px solid var(--line); padding:14px 0}
+  .faq details:last-child{border-bottom:0}
+  .faq summary{cursor:pointer; font-weight:600}
+  .faq p{margin:8px 0 0; color:var(--ink)}
+  code{background:var(--soft); padding:1px 6px; border-radius:5px; font-size:15px}
+  footer{color:var(--muted); font-size:14px; text-align:center; padding:40px 8px 0}
+  @media (max-width:560px){
+    h1{font-size:31px} .sub{font-size:17px} .hero .wrap{padding:40px 16px 44px}
+    .cta{display:block; text-align:center}
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="card">
-    <header>
-      <h1>Better Job Alerts</h1>
-      <p>Privacy Policy &middot; Last updated 11 October 2026</p>
-    </header>
-    <main>
-      <div class="lede">
-        <p style="margin:0 0 8px"><strong>The short version.</strong> I run a small, free email service that
-        sends you job openings matching what you asked for. You tell me what you are looking for, by email
-        or by sending a resume or a LinkedIn link, and I send you matching jobs.</p>
-        <p style="margin:0">I do not sell your personal information. If I ever show ads in these emails,
-        they will be chosen from broad categories only, you will be told before it starts, and you will be
-        able to opt out and keep the alerts.</p>
-      </div>
-
-      <h2>Who I am</h2>
-      <p>Better Job Alerts is operated by Tom Caswell as an individual, not a company.
-      Contact: <a href="mailto:betterjobalerts@gmail.com">betterjobalerts@gmail.com</a></p>
-
-      <h2>What I collect</h2>
-      <h3>You give me</h3>
-      <ul>
-        <li>Your email address.</li>
-        <li>What you are looking for: job titles, location, how far you will travel, whether you want
-        remote work, and anything else you tell me in a reply.</li>
-        <li>Optionally, a resume, which may contain your name, phone number, address, work history,
-        education and other details you chose to include.</li>
-        <li>Optionally, a link to your LinkedIn profile.</li>
-        <li>The content of emails you send me.</li>
-      </ul>
-      <h3>Collected automatically</h3>
-      <ul>
-        <li>Whether a message was delivered, and bounce or complaint notices from mail providers.</li>
-        <li>Basic send records: which alerts went to which address and when.</li>
-        <li>Whether an alert was opened, and which links in it were clicked. Emails may include a small
-        tracking image and links that record the click before sending you on. This tells me which
-        searches are worth running and, if advertising is introduced later, how an ad performed.
-        Turning images off in your mail app stops the open measurement.</li>
-      </ul>
-      <p><strong>I do not collect</strong> payment details, government identifiers, or your contacts.</p>
-
-      <h2>Why I use it</h2>
-      <table>
-        <thead><tr><th>Purpose</th><th>Basis</th></tr></thead>
-        <tbody>
-          <tr><td>Finding and sending jobs that match your request</td><td>Performing the service you asked for</td></tr>
-          <tr><td>Replying when you ask to change your search</td><td>Performing the service you asked for</td></tr>
-          <tr><td>Keeping the service working, preventing abuse</td><td>Legitimate interests</td></tr>
-          <tr><td>Measuring opens and clicks to see which alerts are useful</td><td>Legitimate interests</td></tr>
-          <tr><td>Advertising, if introduced later</td><td>Consent where required, otherwise legitimate interests with an opt-out</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Automated processing</h2>
-      <p>I use AI services (currently Anthropic and OpenAI) to read your request, read a resume you send,
-      and turn it into search criteria. Your text is sent to those providers to do that. They act as
-      processors on my behalf and, under their business terms, do not use the content to train their
-      models.</p>
-      <p>No decision with a legal or similarly significant effect is made about you automatically.
-      Everything here is a suggestion of jobs to look at.</p>
-
-      <h2>Who else sees it</h2>
-      <ul>
-        <li><strong>Email delivery:</strong> Google (Gmail), which carries the mail.</li>
-        <li><strong>AI processing:</strong> Anthropic and OpenAI, as described above.</li>
-        <li><strong>Hosting and storage:</strong> Google Cloud and GitHub, where the service runs and
-        where subscriber records are stored.</li>
-        <li><strong>Job sources:</strong> public employer job boards. I read them, I do not send them
-        anything about you.</li>
-      </ul>
-      <p>I do not sell your personal information, and I do not share it for cross-context behavioural
-      advertising, as those terms are used under California law. If that ever changes, I will update this
-      policy, tell you by email before it takes effect, and give you a way to opt out first.</p>
-
-      <h2>Advertising</h2>
-      <p>There are no ads today. If I add them, these rules apply, and I am stating them now so the terms
-      do not change quietly later:</p>
-      <ol>
-        <li><strong>Your resume and your search criteria will not be sent to advertisers.</strong> Ads may
-        be chosen using broad categories derived from them, for example &ldquo;nursing&rdquo; or
-        &ldquo;sales&rdquo;, but the underlying material stays with me.</li>
-        <li><strong>No third-party ad network gets your email address.</strong> If an ad appears, I place
-        it in the email myself. Advertisers receive aggregate counts, not recipient lists.</li>
-        <li><strong>Ads will be labelled</strong> as sponsored or an advertisement.</li>
-        <li><strong>Opt out and keep the service.</strong> You will be able to reply to ask for alerts
-        without ads, and you will still receive the alerts.</li>
-        <li><strong>Notice first.</strong> You will be told by email before the first ad is sent.</li>
-      </ol>
-      <p>If an ad is ever chosen using tracking that follows you across other sites or services, that
-      counts as &ldquo;sharing&rdquo; under California law, and I will provide a &ldquo;Do Not Sell or
-      Share My Personal Information&rdquo; mechanism and honour Global Privacy Control signals before
-      that starts.</p>
-
-      <h2>How long I keep it</h2>
-      <ul>
-        <li>Subscriber records and search criteria: while you are subscribed, and up to 12 months after
-        you unsubscribe so a re-subscribe is not a cold start.</li>
-        <li>Resume text: until you unsubscribe or ask me to delete it.</li>
-        <li>Message processing records: about 30 days.</li>
-      </ul>
-      <p>Ask me to delete any of it sooner and I will.</p>
-
-      <h2>Your choices</h2>
-      <p><strong>Everyone.</strong> Reply UNSUBSCRIBE to any email to stop immediately. Reply asking me to
-      delete your resume, change your search, or remove your record entirely. Reply asking for a copy of
-      what I hold about you.</p>
-      <p><strong>California (CCPA/CPRA).</strong> You have the right to know, delete, correct, and to opt
-      out of sale or sharing. I do not sell or share as defined there. A resume can contain sensitive
-      personal information; I use it only to build your job search, which is a purpose that does not
-      require a separate limitation right. I will not discriminate against you for exercising any of
-      these rights.</p>
-      <p><strong>EU and UK (GDPR).</strong> You have rights of access, rectification, erasure,
-      restriction, portability and objection, and may complain to your supervisory authority. This is a
-      US-based service, so data is processed in the United States.</p>
-      <p>To use any of these, reply to one of the emails, or write to
-      <a href="mailto:betterjobalerts@gmail.com">betterjobalerts@gmail.com</a>. I will respond within 30
-      days.</p>
-
-      <h2>Children</h2>
-      <p>This service is not for anyone under 16, and I do not knowingly collect their information. If you
-      believe a child has subscribed, tell me and I will delete the record.</p>
-
-      <h2>Security</h2>
-      <p>Credentials are stored in a managed secret store and subscriber records are kept in a private
-      repository. This is a small personal service, not an enterprise system, so please do not send
-      anything you would not want stored in an ordinary email account.</p>
-
-      <h2>Changes</h2>
-      <p>If this policy changes materially, including anything to do with advertising, you will get an
-      email before the change takes effect. The date at the top shows the current version.</p>
-    </main>
+<div class="hero">
+  <div class="wrap">
+    <p class="brand">BETTER JOB ALERTS</p>
+    <h1>New job openings that fit you, by email.</h1>
+    <p class="sub">Tell BJ the role you want and where. It watches company job boards and emails you the openings that match, Monday, Wednesday and Friday. Free, and no account to set up.</p>
+    <a class="cta" href="mailto:betterjobalerts@gmail.com?subject=Job%20alerts&amp;body=I'm%20looking%20for%3A%20%0ANear%3A%20%0ARemote%20is%20OK%3A%20yes%20or%20no%0APay%20at%20least%3A%20%0ASkip%20titles%20like%3A%20">Start with one email</a>
+    <span class="cta-note">Opens an email to <a href="mailto:betterjobalerts@gmail.com">betterjobalerts@gmail.com</a>. Plain English is fine.</span>
   </div>
-  <footer>Better Job Alerts &middot; <a href="mailto:betterjobalerts@gmail.com">betterjobalerts@gmail.com</a></footer>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/yu62RHGz2Es" title="Better Job Alerts tutorial (1:57)"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><span class="num">1</span><b>Send one email</b><span>The role, your city, whether remote is fine, a pay floor and titles to skip. Or attach a resume, or send your LinkedIn link.</span></li>
+      <li><span class="num">2</span><b>Reply CONFIRM</b><span>A short note comes back. Reply with the word CONFIRM and your alerts begin.</span></li>
+      <li><span class="num">3</span><b>Get your alerts</b><span>Monday, Wednesday and Friday, or weekly. New listings are marked, and pay shows when the company posts it.</span></li>
+      <li><span class="num">4</span><b>Tell it what fits</b><span>Tap &#128077; or &#128078; under a job, with a reason if you like. BJ hides what you pass on and puts what you like first.</span></li>
+      <li><span class="num">5</span><b>Prep me and Employer reviews</b><span>One tap gets interview prep for a job, or a sourced rundown of what people say about working there.</span></li>
+      <li><span class="num">6</span><b>Change it any time</b><span>Reply to any alert in plain language, like adding a search or switching to weekly. There's no settings page.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What an alert looks like</h2>
+    <div class="example">
+      <img src="example-alert.jpg" width="1400" height="721" loading="lazy"
+           alt="An example alert email listing four jobs, each with Good fit, Not a fit, Prep me and Employer reviews links.">
+      <p>An example with made-up listings.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <div class="faq">
+      <details><summary>What does it cost?</summary><p>Nothing. Better Job Alerts is free.</p></details>
+      <details><summary>Does it apply for jobs for me?</summary><p>No. It sends you links and listings. You decide what to apply for and apply yourself.</p></details>
+      <details><summary>How do I change my alerts?</summary><p>Reply to any alert and say what you want, in your own words. BJ reads replies every few minutes.</p></details>
+      <details><summary>How do I stop?</summary><p>Reply <code>UNSUBSCRIBE</code> to any alert.</p></details>
+      <details><summary>What happens to my information?</summary><p>The <a href="privacy/">privacy policy</a> explains what's kept, why, and how to have it deleted.</p></details>
+    </div>
+  </section>
+
+  <footer>Better Job Alerts &middot; <a href="mailto:betterjobalerts@gmail.com">betterjobalerts@gmail.com</a> &middot; <a href="privacy/">Privacy policy</a></footer>
 </div>
 </body>
 </html>
